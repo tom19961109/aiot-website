@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zh.aie-tec.com.tw/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://zh.aie-tec.com.tw/zh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zh.aie-tec.com.tw/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://zh.aie-tec.com.tw/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zh.aie-tec.com.tw/"/>
+    <loc>https://aiot.aie-tec.com.tw/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://aiot.aie-tec.com.tw/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiot.aie-tec.com.tw/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aiot.aie-tec.com.tw/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiot.aie-tec.com.tw/"/>
   </url>
   <url>
-    <loc>https://zh.aie-tec.com.tw/zh/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://zh.aie-tec.com.tw/zh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zh.aie-tec.com.tw/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://zh.aie-tec.com.tw/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zh.aie-tec.com.tw/"/>
+    <loc>https://aiot.aie-tec.com.tw/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://aiot.aie-tec.com.tw/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiot.aie-tec.com.tw/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aiot.aie-tec.com.tw/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiot.aie-tec.com.tw/"/>
   </url>
   <url>
-    <loc>https://zh.aie-tec.com.tw/en/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://zh.aie-tec.com.tw/zh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zh.aie-tec.com.tw/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://zh.aie-tec.com.tw/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zh.aie-tec.com.tw/"/>
+    <loc>https://aiot.aie-tec.com.tw/en/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://aiot.aie-tec.com.tw/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiot.aie-tec.com.tw/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aiot.aie-tec.com.tw/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiot.aie-tec.com.tw/"/>
   </url>
   <url>
-    <loc>https://zh.aie-tec.com.tw/ja/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://zh.aie-tec.com.tw/zh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zh.aie-tec.com.tw/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://zh.aie-tec.com.tw/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zh.aie-tec.com.tw/"/>
+    <loc>https://aiot.aie-tec.com.tw/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://aiot.aie-tec.com.tw/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiot.aie-tec.com.tw/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aiot.aie-tec.com.tw/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiot.aie-tec.com.tw/"/>
   </url>
 </urlset>
