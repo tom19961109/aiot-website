@@ -41,10 +41,10 @@ const items = computed(() => [
   //   label: 'Pricing',
   //   to: '/pricing'
   // },
-  {
-    label: 'Blog',
-    to: '/blog'
-  },
+  // {
+  //   label: 'Blog',
+  //   to: '/blog'
+  // },
   // {
   //   label: 'Changelog',
   //   to: '/changelog'
