@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - run: corepack enable
+
+      - run: pnpm install --frozen-lockfile
+
+      # ① 建置 Nuxt
+      - run: NUXT_APP_BASE_URL=/aiot-website/ pnpm exec nuxt generate
+
+        # ② 加在這裡：檢查 Nuxt 實際產生哪些檔案
+      - name: Check generated files
+        run: |
+          echo "=== Public ==="
+          ls -la .output/public
+
+          echo "=== Nuxt assets ==="
+          ls -la .output/public/_nuxt | head -100
+
+          echo "=== JS files ==="
+          find .output/public -type f -name "*.js" | head -100
+
+      # ③ 再上傳到 GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
