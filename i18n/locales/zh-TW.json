@@ -1,0 +1,38 @@
+{
+  "banner_title": "智慧製造 × AI × 自動化整合專家",
+  "banner_description": "協助半導體與電子製造產業建構下一代智慧工廠",
+
+  "seo": {
+    "index": {
+      "title": "安智聯科技 智慧製造 × AI × 自動化整合專家",
+      "description": "協助半導體與電子製造產業建構下一代智慧工廠，提供的核心解決方案有EAP,RCM,RPA,MES,SPC,AiDC,AIoT智聯網，服務產業為晶圓代工、封裝測試、IC載板、PCB、面板、電子零組件"
+    }
+  },
+
+  "solutions": {
+    "title": "核心解決方案",
+    "eap_title": "EAP 設備自動化平台",
+    "eap_description": "透過 SECS/GEM 協議實現設備聯網監控與數據採集，與MES溝通，打造智慧工廠基礎架構。",
+    "rcm_title": "RCM遠端機台控制系統",
+    "rcm_description": "集中化管理工廠設備，提供多畫面監控、遠程操作、操作錄頻與完整稽核追蹤。",
+    "rpa_title": "RPA 流程自動化機器人",
+    "rpa_description": "結合 AI 視覺辨識技術，自動執行重複性作業，提高人機比並降低人為失誤。",
+    "spc_title": "SPC 統計製程控制",
+    "spc_description": "即時監控制程能力，自動告警並進行品質預防管理。",
+    "aidc_title": "AiDC 智慧缺陷檢測系統",
+    "aidc_description": "運用 AI 深度學習技術進行缺陷分類與視覺檢測，提升檢測效率與產品良率。",
+    "aiot_title": "AIoT 智聯網",
+    "aiot_description": "可視化全面掌控、有效預防宕機、即時監控。"
+  },
+
+  "industries": {
+    "title": "服務產業",
+    "description": "整合式智慧製造生態系統",
+    "semi_title": "晶圓代工",
+    "osat_title": "封裝測試",
+    "ic_title": "IC載板",
+    "pcb_title": "PCB",
+    "lcd_title": "面板",
+    "elec_title": "電子零組件"
+  }
+}

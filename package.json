@@ -1,17 +1,40 @@
 {
-  "name": "aiot-website",
+  "name": "nuxt-ui-template-saas",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "nuxt": "^3.15.4",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@iconify-json/lucide": "^1.2.129",
+    "@iconify-json/simple-icons": "^1.2.94",
+    "@nuxt/content": "^3.16.0",
+    "@nuxt/image": "^2.1.0",
+    "@nuxt/ui": "^4.11.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@standard-schema/spec": "^1.1.0",
+    "@takumi-rs/core": "^2.13.6",
+    "@vueuse/nuxt": "^14.4.0",
+    "nuxt": "^4.5.2",
+    "nuxt-og-image": "^6.7.8",
+    "tailwindcss": "^4.3.3",
+    "ufo": "^1.6.4",
+    "zod": "^4.5.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.11"
+  },
+  "packageManager": "pnpm@11.25.0"
 }

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aiot.aie-tec.com.tw/sitemap.xml

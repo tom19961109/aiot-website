@@ -1,25 +1,73 @@
+import nuxtI18n from '@nuxtjs/i18n'
+
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-01-01',
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@vueuse/nuxt',
+    'nuxt-og-image',
+    nuxtI18n
+  ],
+
   devtools: {
-    enabled: false
+    enabled: true
   },
-  ssr: true,
+
   css: ['~/assets/css/main.css'],
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'zh-Hant'
-      },
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'robots', content: 'index, follow' }
-      ]
+
+  content: {
+    experimental: {
+      sqliteConnector: 'native'
     }
   },
+
+  routeRules: {
+    '/docs': { redirect: '/docs/getting-started', prerender: false }
+  },
+
+  compatibilityDate: '2026-06-30',
+
   nitro: {
     prerender: {
-      routes: ['/', '/zh/', '/en/', '/ja/']
+      routes: ['/'],
+      crawlLinks: true
     }
+  },
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  },
+
+  i18n: {
+    defaultLocale: 'zh-TW',
+    locales: [
+      {
+        code: 'zh-TW',
+        file: 'zh-TW.json',
+        name: '繁體中文'
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English'
+      },
+      {
+        code: 'ja',
+        file: 'ja.json',
+        name: '日本語'
+      }
+    ]
+  },
+
+  ogImage: {
+    zeroRuntime: true
   }
 })

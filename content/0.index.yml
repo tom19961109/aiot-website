@@ -1,0 +1,63 @@
+banner_title: banner_title
+banner_description: banner_description
+
+seo:
+  title: seo.index.title
+  description: seo.index.description
+navigation: false
+
+features:
+  title: solutions.title
+  solutions:
+    eap_title: solutions.eap_title
+    eap_description: solutions.eap_description
+    rcm_title: solutions.rcm_title
+    rcm_description: solutions.rcm_description
+    rpa_title: solutions.rpa_title
+    rpa_description: solutions.rpa_description
+    spc_title: solutions.spc_title
+    spc_description: solutions.spc_description
+    aidc_title: solutions.aidc_title
+    aidc_description: solutions.aidc_description
+    aiot_title: solutions.aiot_title
+    aiot_description: solutions.aiot_description
+
+sections:
+  - title: Powered by Nuxt UI Components
+    description: Access the complete Nuxt UI component library with 100+ beautifully styled, accessible, and customizable Vue components. Everything you need to build professional SaaS applications.
+    id: features
+    orientation: horizontal
+    features:
+      - name: 100+ UI Components
+        description: From buttons to modals, data tables to forms - all styled with Tailwind CSS and accessible out of the box.
+        icon: i-lucide-package
+      - name: Authentication Ready
+        description: Pre-built login, signup, and password reset flows. Just connect your backend and start onboarding users.
+        icon: i-lucide-shield
+      - name: TypeScript First
+        description: Full TypeScript support with auto-completion, type safety, and IntelliSense for every component and composable.
+        icon: i-lucide-code-xml
+  - title: Built for Modern SaaS
+    description: Everything you need to launch and scale your SaaS. From beautiful marketing pages to complex dashboards, ship faster with production-ready patterns.
+    orientation: horizontal
+    reverse: true
+    features:
+      - name: Edge Performance
+        description: Optimized for Core Web Vitals with automatic code splitting, lazy loading, and SSR/SSG support.
+        icon: i-lucide-zap
+      - name: Dark Mode Ready
+        description: Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice.
+        icon: i-lucide-moon
+      - name: Global Ready
+        description: Built-in i18n support for 50+ languages with RTL/LTR layouts and @nuxt/fonts integration.
+        icon: i-lucide-globe
+
+industries:
+  title: industries.title
+  description: industries.description
+  semi_title: industries.semi_title
+  osat_title: industries.osat_title
+  ic_title: industries.ic_title
+  pcb_title: industries.pcb_title
+  lcd_title: industries.lcd_title
+  elec_title: industries.elec_title
