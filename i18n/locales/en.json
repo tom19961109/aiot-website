@@ -42,5 +42,16 @@
     "pcb_title": "PCB",
     "lcd_title": "Display Panels",
     "elec_title": "Electronic Components"
+  },
+
+  "aboutUs": {
+    "main_title": "About Us",
+    "title": "ABOUT AIE",
+    "company_introduction": "Company Introduction",
+    "company_introduction_description": "Founded in 2018, the company specializes in smart manufacturing and Industry 4.0 solutions, serving industries such as semiconductors, display panels, PCBs, and electronics manufacturing, and providing enterprises with comprehensive intelligent manufacturing solutions.",
+    "all_in": "One‑Stop Industry 4.0 Solution",
+    "all_in_description": "We provide remote control systems (RCM), manufacturing process automation (RPA), AIoT, Big Data analytics platforms, and self‑developed AI software to meet the needs of smart manufacturing. \n With a comprehensive workflow of real‑time inspection, analysis, prediction, and response, we help enterprises resolve issues that arise during manufacturing.",
+    "AI_decision": "AI‑Driven Intelligent Decision‑Making",
+    "AI_decision_description": "By integrating artificial intelligence technologies, we enable real‑time inspection, analysis, prediction, and anomaly handling, helping enterprises continuously optimize their processes and fully realize the value of Industry 4.0 and smart factories. "
   }
 }

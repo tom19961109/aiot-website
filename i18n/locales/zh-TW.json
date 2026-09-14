@@ -42,5 +42,16 @@
     "pcb_title": "PCB",
     "lcd_title": "面板",
     "elec_title": "電子零組件"
+  },
+
+  "aboutUs": {
+    "main_title": "關於我們",
+    "title": "關於安智聯科技",
+    "company_introduction": "公司介紹",
+    "company_introduction_description": "成立於 2018 年，專注於智慧製造與工業 4.0 解決方案，服務半導體、面板、PCB 與電子製造等產業，提供企業智慧製造解決方案。",
+    "all_in": "一站式工業 4.0 解決方案",
+    "all_in_description": "提供遠端控制系統（RCM）、製造流程自動化（RPA）、AIoT、Big Data 分析平台，以及自主研發 AI 軟體，滿足智慧製造需求。 \n 以即時檢測、分析、預測和處理的全方位流程，協助企業解決製造出現的問題。",
+    "AI_decision": "AI 驅動智慧決策",
+    "AI_decision_description": "結合人工智慧技術，實現即時檢測、分析、預測與異常處理，協助企業持續優化製程，充分發揮工業 4.0與智慧工廠的價值。"
   }
 }

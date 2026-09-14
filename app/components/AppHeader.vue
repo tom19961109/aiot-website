@@ -95,6 +95,10 @@ const items = computed(() => [
   {
     label: t('contactUs.title'),
     to: '/contactUs'
+  },
+  {
+    label: t('aboutUs.main_title'),
+    to: '/aboutUs'
   }
 ])
 

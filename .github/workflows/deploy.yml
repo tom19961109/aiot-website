@@ -1,7 +1,5 @@
 ﻿name: Deploy to GitHub Pages
 
-# TODO:網域為 https://aie-tec.com.tw/ ，需要怎麼調整？
-
 on:
   workflow_dispatch:
   push:
