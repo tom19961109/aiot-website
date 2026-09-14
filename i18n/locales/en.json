@@ -1,0 +1,38 @@
+{
+  "banner_title": "Smart Manufacturing × AI × Automation Integration Specialist",
+  "banner_description": "Building Next‑Generation Smart Factories for the Semiconductor and Electronics Manufacturing Industries ",
+
+  "seo": {
+    "index": {
+      "title": "AIoT Smart Manufacturing × AI × Automation Integration Specialist",
+      "description": "“We support the semiconductor and electronics manufacturing industries in building next‑generation smart factories, providing core solutions including EAP, RCM, RPA, MES, SPC, AiDC, and AIoT connectivity. Our services cover foundry, assembly and test, IC substrates, PCB, display, and electronic components."
+    }
+  },
+
+  "solutions": {
+    "title": "Core Solutions  ",
+    "eap_title": "Equipment Automation Platform",
+    "eap_description": "Using the SECS/GEM protocol to realize equipment networking, automated recipe management, equipment monitoring, and data collection, forming the foundational architecture of a smart factory.",
+    "rcm_title": "Remote Control Management System",
+    "rcm_description": "Centralized management of factory equipment, providing multi‑screen monitoring, remote operation, operation recording, and complete audit tracing.",
+    "rpa_title": "Robotic Process Automation",
+    "rpa_description": "Combining AI‑powered vision recognition to automatically execute repetitive tasks, increase the man‑to‑machine ratio, and reduce human errors.",
+    "spc_title": "Statistical Process Control",
+    "spc_description": "Real‑time monitoring of process capability with automated alerts and preventive quality management.",
+    "aidc_title": "AiDC Defect Detection System",
+    "aidc_description": "Applying AI‑based deep learning for defect classification and vision inspection to boost inspection throughput and improve yield rates.",
+    "aiot_title": "AIoT",
+    "aiot_description": "Comprehensive visualization and control, effective downtime prevention, and real‑time monitoring. "
+  },
+
+  "industries": {
+    "title": "Service Industries",
+    "description": "Unified Smart Manufacturing Ecosystem",
+    "semi_title": "Wafer Foundry",
+    "osat_title": "Assembly and Test (OSAT)",
+    "ic_title": "IC Substrates",
+    "pcb_title": "PCB",
+    "lcd_title": "Display Panels",
+    "elec_title": "Electronic Components"
+  }
+}
