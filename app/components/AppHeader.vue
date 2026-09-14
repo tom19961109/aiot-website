@@ -54,32 +54,8 @@ const open = ref(true)
 
 const { t } = useI18n()
 
-// const { data: page } = await useAsyncData('index', () => queryCollection('index').first())
-
-// /** 核心解決方案 標題 */
-// const featuresTitle = computed(() =>
-//   page.value?.features.title ? t(page.value.features.title) : page.value?.features.title
-// )
-
 /** 選單項目 */
 const items = computed(() => [
-  // {
-  //   label: 'Docs',
-  //   to: '/docs',
-  //   active: isDocs.value
-  // },
-  // {
-  //   label: 'Pricing',
-  //   to: '/pricing'
-  // },
-  // {
-  //   label: 'Blog',
-  //   to: '/blog'
-  // },
-  // {
-  //   label: 'Changelog',
-  //   to: '/changelog'
-  // },
   {
     label: t('solutions.title'),
     // to: '/solutions',
@@ -115,6 +91,10 @@ const items = computed(() => [
         to: '/solutions/aiot'
       }
     ]
+  },
+  {
+    label: t('contactUs.title'),
+    to: '/contactUs'
   }
 ])
 

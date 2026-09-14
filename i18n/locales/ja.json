@@ -25,6 +25,12 @@
     "aiot_description": "可視化による全体把握、効果的なダウンタイム防止、リアルタイム監視。 "
   },
 
+  "contactUs": {
+    "title": "お問い合わせ",
+    "Taoyuan": "桃園本社",
+    "Fukuoka": "日本・福岡"
+  },
+
   "industries": {
     "title": "サービス産業",
     "description": "統合型スマート製造エコシステム",

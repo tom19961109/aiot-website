@@ -25,6 +25,12 @@
     "aiot_description": "Comprehensive visualization and control, effective downtime prevention, and real‑time monitoring. "
   },
 
+  "contactUs": {
+    "title": "CONTACT US",
+    "Taoyuan": "Taoyuan",
+    "Fukuoka": "Fukuoka"
+  },
+
   "industries": {
     "title": "Service Industries",
     "description": "Unified Smart Manufacturing Ecosystem",

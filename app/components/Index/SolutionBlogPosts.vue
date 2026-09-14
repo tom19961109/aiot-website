@@ -33,22 +33,6 @@ import spcImage from '@/assets/images/SPC.png'
 import adcImage from '@/assets/images/ADC.png'
 import aIotImage from '@/assets/images/AIOT.png'
 
-// const props = defineProps<{
-//   solutions: {
-//     eap_title: string
-//     eap_description: string
-//     rcm_title: string
-//     rcm_description: string
-//     rpa_title: string
-//     rpa_description: string
-//     spc_title: string
-//     spc_description: string
-//     aidc_title: string
-//     aidc_description: string
-//     aiot_title: string
-//     aiot_description: string
-//   }
-// }>()
 const { t } = useI18n()
 
 /** 取得文章用圖片 */
@@ -77,37 +61,37 @@ const posts = computed<BlogPostProps[]>(() => [
     title: t('solutions.eap_title'),
     description: t('solutions.eap_description'),
     image: eapImage,
-    // to: '/solutions/eap'
+    to: '/solutions/eap'
   },
   {
     title: t('solutions.rcm_title'),
     description: t('solutions.rcm_description'),
     image: rcmImage,
-    // to: '/solutions/rcm'
+    to: '/solutions/rcm'
   },
   {
     title: t('solutions.rpa_title'),
     description: t('solutions.rpa_description'),
     image: rpaImage,
-    // to: '/solutions/rpa'
+    to: '/solutions/rpa'
   },
   {
     title: t('solutions.spc_title'),
     description: t('solutions.spc_description'),
     image: spcImage,
-    // to: '/solutions/spc'
+    to: '/solutions/spc'
   },
   {
     title: t('solutions.aidc_title'),
     description: t('solutions.aidc_description'),
     image: adcImage,
-    // to: '/solutions/aidc'
+    to: '/solutions/aidc'
   },
   {
     title: t('solutions.aiot_title'),
     description: t('solutions.aiot_description'),
     image: aIotImage,
-    // to: '/solutions/aiot'
+    to: '/solutions/aiot'
   }
 ])
 </script>

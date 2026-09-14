@@ -25,6 +25,12 @@
     "aiot_description": "可視化全面掌控、有效預防宕機、即時監控。"
   },
 
+  "contactUs": {
+    "title": "聯絡我們",
+    "Taoyuan": "桃園總部",
+    "Fukuoka": "日本福岡"
+  },
+
   "industries": {
     "title": "服務產業",
     "description": "整合式智慧製造生態系統",
