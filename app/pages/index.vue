@@ -82,6 +82,7 @@ useSeoMeta({
         spotlight
         spotlight-color="primary"
         :ui="{ title: 'text-center' }"
+        to="/industries"
       >
         <img
           :src="item.src"

@@ -11,7 +11,6 @@
           class="w-auto h-10 shrink-0"
         />
       </NuxtLink>
-      <!-- <TemplateMenu /> -->
     </template>
 
     <UNavigationMenu
@@ -91,6 +90,10 @@ const items = computed(() => [
         to: '/solutions/aiot'
       }
     ]
+  },
+  {
+    label: t('industries.title'),
+    to: '/industries'
   },
   {
     label: t('contactUs.title'),
