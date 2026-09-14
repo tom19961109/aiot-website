@@ -1,5 +1,7 @@
 ﻿name: Deploy to GitHub Pages
 
+# TODO:網域為 https://aie-tec.com.tw/ ，需要怎麼調整？
+
 on:
   workflow_dispatch:
   push:
@@ -26,7 +28,7 @@ jobs:
       - name: Build static site
         run: npm run build -- --preset github_pages
         env:
-          NUXT_APP_BASE_URL: /nuxtAiotWebsite/
+          NUXT_APP_BASE_URL: /
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
