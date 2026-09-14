@@ -18,10 +18,7 @@
 
 <script setup lang="ts">
 const { t, locale } = useI18n()
-const contentStem = computed(() =>
-  `solutions/${locale.value}/4.spc`
-)
-
+const contentStem = computed(() => `solutions/${locale.value}/4.spc`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-spc-${locale.value}`,
@@ -32,8 +29,8 @@ const title = t('solutions.spc_title')
 const description = t('solutions.spc_description')
 
 useSeoMeta({
-  title,
-  ogTitle: title,
+  title: `${t('seo.index.title')}-${title}`,
+  ogTitle: `${t('seo.index.title')}-${title}`,
   description,
   ogDescription: description
 })

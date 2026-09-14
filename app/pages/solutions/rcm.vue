@@ -32,8 +32,8 @@ const title = t('solutions.rcm_title')
 const description = t('solutions.rcm_description')
 
 useSeoMeta({
-  title,
-  ogTitle: title,
+  title: `${t('seo.index.title')}-${title}`,
+  ogTitle: `${t('seo.index.title')}-${title}`,
   description,
   ogDescription: description
 })
