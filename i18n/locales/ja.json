@@ -28,7 +28,9 @@
   "contactUs": {
     "title": "お問い合わせ",
     "Taoyuan": "桃園本社",
-    "Fukuoka": "日本・福岡"
+    "TaoyuanAddress": "桃園市桃園區復興路205號8樓之2",
+    "Fukuoka": "日本・福岡",
+    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室"
   },
 
   "industries": {

@@ -28,7 +28,9 @@
   "contactUs": {
     "title": "CONTACT US",
     "Taoyuan": "Taoyuan",
-    "Fukuoka": "Fukuoka"
+    "TaoyuanAddress": "8F‑2, No. 205, Fuxing Road, Taoyuan District, Taoyuan City, Taiwan",
+    "Fukuoka": "Fukuoka",
+    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室"
   },
 
   "industries": {

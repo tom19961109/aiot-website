@@ -12,7 +12,7 @@
         orientation="horizontal"
         spotlight
         spotlight-color="primary"
-        class="m-[10px] w-370 text-center"
+        class="m-[10px] text-center"
         :ui="{
           wrapper: 'items-stretch',
           description: 'text-center'
@@ -105,7 +105,7 @@
         orientation="horizontal"
         spotlight
         spotlight-color="primary"
-        class="m-[10px] w-370 text-center"
+        class="m-[10px] text-center"
         :ui="{
           wrapper: 'items-stretch',
           description: 'text-center'
@@ -199,4 +199,25 @@ const items = ref<TabsItem[]>([
     code: 'Fukuoka'
   }
 ])
+
+const description = computed(() => {
+  let address = ''
+  if (locale.value === 'zh-TW' || locale.value === 'en') {
+    address = t('contactUs.TaoyuanAddress')
+  }
+
+  if (locale.value === 'ja') {
+    address = t('contactUs.FukuokaAddress')
+  }
+
+  const email = 'E-mail:stacy.yang@aie-tec.com'
+  return `${address},${email}`
+})
+
+useSeoMeta({
+  title: `${t('seo.index.title')}-${t('contactUs.title')}`,
+  ogTitle: `${t('seo.index.title')}-${t('contactUs.title')}`,
+  description: description,
+  ogDescription: description
+})
 </script>
