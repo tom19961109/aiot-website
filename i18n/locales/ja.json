@@ -30,7 +30,13 @@
     "Taoyuan": "桃園本社",
     "TaoyuanAddress": "桃園市桃園區復興路205號8樓之2",
     "Fukuoka": "日本・福岡",
-    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室"
+    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室",
+
+    "address": "住所（じゅうしょ）",
+    "business_hours": "営業時間（えいぎょうじかん）",
+    "business_hours_info": "月曜日から金曜日まで 09:00〜18:00",
+    "phone": "電話番号（でんわばんごう）",
+    "fax": "ファックス番号（ファックスばんごう）"
   },
 
   "industries": {

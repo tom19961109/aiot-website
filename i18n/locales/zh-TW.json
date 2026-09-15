@@ -5,7 +5,7 @@
   "seo": {
     "index": {
       "title": "安智聯科技 智慧製造 × AI × 自動化整合專家",
-      "description": "協助半導體與電子製造產業建構下一代智慧工廠，提供的核心解決方案有EAP,RCM,RPA,MES,SPC,AiDC,AIoT智聯網，服務產業為晶圓代工、封裝測試、IC載板、PCB、面板、電子零組件"
+      "description": "協助半導體與電子製造產業建構下一代智慧工廠，提供的核心解決方案有EAP,RCM,RPA,MES,SPC,AiDC,AIoT智聯網，服務產業為晶圓代工、封裝測試、IC載板、PCB、面板、電子零組件。"
     }
   },
 
@@ -30,7 +30,13 @@
     "Taoyuan": "桃園總部",
     "TaoyuanAddress": "桃園市桃園區復興路205號8樓之2",
     "Fukuoka": "日本福岡",
-    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室"
+    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室",
+
+    "address": "地址",
+    "business_hours": "營業時間",
+    "business_hours_info": "星期一至星期五 09am-06pm",
+    "phone": "電話",
+    "fax": "傳真"
   },
 
   "industries": {

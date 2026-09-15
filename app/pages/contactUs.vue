@@ -26,6 +26,7 @@
                   name="i-lucide-map-pin"
                   class="mt-0.5 size-5 shrink-0"
                 />
+                {{ $t('contactUs.address') }}:
                 <a
                   v-if="locale === 'zh-TW'"
                   href="https://www.google.com/maps/search/?api=1&query=330桃園市桃園區文明里復興路205號"
@@ -45,20 +46,31 @@
                 >
                   8F‑2, No. 205, Fuxing Road, Taoyuan District, Taoyuan City, Taiwan
                 </a>
+
+                <a
+                  v-if="locale === 'ja'"
+                  href="https://www.google.com/maps/search/?api=1&query=福岡県福岡市中央区荒戸三丁目253番"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  {{ t('contactUs.FukuokaAddress') }}
+                </a>
               </li>
               <li class="flex items-start justify-center gap-2">
                 <UIcon
                   name="i-lucide-clock"
                   class="mt-0.5 size-5 shrink-0"
                 />
-                <span v-if="locale === 'zh-TW'">星期一至星期五 09am-06pm</span>
-                <span v-if="locale === 'en'">Monday to Friday 09am-06pm</span>
+                {{ $t('contactUs.business_hours') }}:
+                {{ $t('contactUs.business_hours_info') }}
               </li>
               <li class="flex items-center justify-center gap-2">
                 <UIcon
                   name="i-lucide-phone"
                   class="size-5 shrink-0"
                 />
+                {{ $t('contactUs.phone') }}:
                 <a
                   href="tel:033310563"
                   class="hover:underline"
@@ -70,6 +82,7 @@
                   name="i-lucide-printer"
                   class="size-5 shrink-0"
                 />
+                {{ $t('contactUs.fax') }}:
                 <span>03-331-0573</span>
               </li>
               <li class="flex items-start justify-center gap-2">
@@ -77,6 +90,7 @@
                   name="i-lucide-mail"
                   class="mt-0.5 size-5 shrink-0"
                 />
+                E-mail:
                 <a
                   href="mailto:stacy.yang@aie-tec.com"
                   class="break-all hover:underline"
@@ -119,6 +133,7 @@
                   name="i-lucide-map-pin"
                   class="mt-0.5 size-5 shrink-0"
                 />
+                {{ $t('contactUs.address') }}:
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=福岡県福岡市中央区荒戸三丁目253番"
                   target="_blank"
@@ -133,13 +148,15 @@
                   name="i-lucide-clock"
                   class="mt-0.5 size-5 shrink-0"
                 />
-                <span>月曜日から金曜日まで 09:00〜18:00</span>
+                {{ $t('contactUs.business_hours') }}:
+                {{ $t('contactUs.business_hours_info') }}
               </li>
               <li class="flex items-center justify-center gap-2">
                 <UIcon
                   name="i-lucide-phone"
                   class="size-5 shrink-0"
                 />
+                {{ $t('contactUs.phone') }}:
                 <a
                   href="tel:033310563"
                   class="hover:underline"
@@ -151,6 +168,7 @@
                   name="i-lucide-printer"
                   class="size-5 shrink-0"
                 />
+                {{ $t('contactUs.fax') }}:
                 <span>03-331-0573</span>
               </li>
               <li class="flex items-start justify-center gap-2">
@@ -158,6 +176,7 @@
                   name="i-lucide-mail"
                   class="mt-0.5 size-5 shrink-0"
                 />
+                E-mail:
                 <a
                   href="mailto:stacy.yang@aie-tec.com"
                   class="break-all hover:underline"

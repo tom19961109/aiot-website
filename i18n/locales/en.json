@@ -30,7 +30,13 @@
     "Taoyuan": "Taoyuan",
     "TaoyuanAddress": "8F‑2, No. 205, Fuxing Road, Taoyuan District, Taoyuan City, Taiwan",
     "Fukuoka": "Fukuoka",
-    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室"
+    "FukuokaAddress": "福岡県福岡市中央区荒戸三丁目253番902號室",
+
+    "address": "Address",
+    "business_hours": "Business hours",
+    "business_hours_info": "Monday to Friday 09am-06pm",
+    "phone": "Phone",
+    "fax": "Fax"
   },
 
   "industries": {
