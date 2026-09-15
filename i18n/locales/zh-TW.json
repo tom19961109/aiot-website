@@ -11,6 +11,8 @@
 
   "solutions": {
     "title": "核心解決方案",
+    "system_integration": "系統整合",
+    "system_integration_description": "從EAP 設備自動化平台做數據採集，到搭配AIE自主研發的AIoT 智聯網平台，跟MES,SPC等等對接。",
     "eap_title": "EAP 設備自動化平台",
     "eap_description": "透過 SECS/GEM 協議實現設備聯網監控與數據採集，與MES溝通，打造智慧工廠基礎架構。",
     "rcm_title": "RCM遠端機台控制系統",

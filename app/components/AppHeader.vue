@@ -63,7 +63,7 @@ const { t } = useI18n()
 const items = computed(() => [
   {
     label: t('solutions.title'),
-    // to: '/solutions',
+    to: '/solutions',
     children: [
       {
         label: t('solutions.eap_title'),

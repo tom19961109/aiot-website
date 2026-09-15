@@ -60,12 +60,38 @@ useHead(() => ({
         name: `${t('seo.index.title')}-${title}`,
         description: schemaDescription.value,
         inLanguage: locale.value,
+        breadcrumb: {
+          '@id': `${pageUrl.value}#breadcrumb`
+        },
         isPartOf: {
           '@id': 'https://www.aie-tec.com.tw/#website'
         },
         publisher: {
           '@id': 'https://www.aie-tec.com.tw/#organization'
         }
+      }).replace(/</g, '\\u003c')
+    },
+    {
+      key: 'eap-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: `https://www.aie-tec.com.tw${localePath('/')}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: t('solutions.eap_title'),
+            item: pageUrl.value
+          }
+        ]
       }).replace(/</g, '\\u003c')
     }
   ]

@@ -11,6 +11,8 @@
 
   "solutions": {
     "title": "コアソリューション",
+    "system_integration": "システム統合（しすてむとうごう）",
+    "system_integration_description": "EAP設備自動化プラットフォームによるデータ収集を起点とし、AIEが独自開発した AIoT スマートコネクティビティプラットフォームを組み合わせることで、MES や SPC などの上位システムと連携します。",
     "eap_title": "EAP 設備自動化プラットフォーム",
     "eap_description": "SECS/GEM プロトコルを通じて装置のネットワーク化・監視およびデータ収集を実現し、MES と連携することで、スマートファクトリーの基盤を構築します。",
     "rcm_title": "RCM 遠隔機器制御システム ",

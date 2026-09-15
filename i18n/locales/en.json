@@ -11,6 +11,8 @@
 
   "solutions": {
     "title": "Core Solutions  ",
+    "system_integration": "System integration",
+    "system_integration_description": "From data collection through the EAP equipment automation platform to integration with AIE’s self‑developed AIoT smart connectivity platform, enabling seamless interfacing with MES, SPC, and other upper‑level systems.",
     "eap_title": "Equipment Automation Platform",
     "eap_description": "Using the SECS/GEM protocol to realize equipment networking, automated recipe management, equipment monitoring, and data collection, forming the foundational architecture of a smart factory.",
     "rcm_title": "Remote Control Management System",

@@ -48,6 +48,31 @@ useSeoMeta({
   ogDescription: t('seo.index.description'),
   ogImage: ogImageUrl
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'index-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: pageUrl.value
+          }
+        ]
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>
 
 <template>
