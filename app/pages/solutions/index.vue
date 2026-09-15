@@ -28,7 +28,7 @@ const { t, locale } = useI18n()
 const contentStem = computed(() => `solutions/${locale.value}/7.integration`)
 
 const { data: postValue } = await useAsyncData(
-  () => `solutions-eap-${locale.value}`,
+  () => `solutions-integration-${locale.value}`,
   () => queryCollection('content').where('stem', '=', contentStem.value).first()
 )
 
