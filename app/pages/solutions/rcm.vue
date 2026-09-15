@@ -37,4 +37,31 @@ useSeoMeta({
   description,
   ogDescription: description
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/solutions/rcm')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'rcm-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${title}`,
+        description: description,
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        publisher: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        }
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>

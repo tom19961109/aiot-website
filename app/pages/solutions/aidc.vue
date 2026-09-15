@@ -18,7 +18,7 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 
-const contentStem = computed(() => `solutions/${locale.value}/1.eap`)
+const contentStem = computed(() => `solutions/${locale.value}/5.aidc`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-aidc-${locale.value}`,
@@ -34,4 +34,31 @@ useSeoMeta({
   description,
   ogDescription: description
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/solutions/aidc')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'aidc-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${title}`,
+        description: description,
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        publisher: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        }
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>

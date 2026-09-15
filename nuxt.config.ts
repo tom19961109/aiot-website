@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: 'https://www.aie-tec.com.tw',
     defaultLocale: 'zh-TW',
     strategy: 'prefix_except_default',
     locales: [

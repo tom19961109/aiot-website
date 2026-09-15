@@ -34,4 +34,39 @@ useSeoMeta({
   description,
   ogDescription: description
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/solutions/aiot')}`)
+
+const lang = ref()
+if (locale.value === 'zh-TW') {
+  lang.value = 'zhTw'
+}
+
+const imgUrl = `https://www.aie-tec.com.tw/images/AIOT-${lang.value}.png`
+
+useHead(() => ({
+  script: [
+    {
+      key: 'aiot-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${title}`,
+        description: description,
+        image: imgUrl,
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        publisher: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        }
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>
