@@ -8,7 +8,7 @@ import lcdImage from '~/assets/images/LCD.png'
 import elecImage from '~/assets/images/ElecCoMa.png'
 import ImageBanner from '~/components/Index/ImageBanner.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 /** 服務產業 列表 */
 const industrieList = computed(() => [
@@ -38,15 +38,15 @@ const industrieList = computed(() => [
   }
 ])
 
+const ogImageUrl = `https://www.aie-tec.com.tw/indexSnap-${locale.value}.png`
+
 useSeoMeta({
   titleTemplate: '',
   title: t('seo.index.title'),
   ogTitle: t('seo.index.title'),
   description: t('seo.index.description'),
   ogDescription: t('seo.index.description'),
-
-  // TODO:要找完成的首頁圖片取代
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/saas-light.png'
+  ogImage: ogImageUrl
 })
 </script>
 
