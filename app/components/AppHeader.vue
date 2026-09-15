@@ -1,5 +1,16 @@
 <template>
-  <UHeader v-model:open="open">
+  <UHeader
+    v-model:open="open"
+    :toggle="{
+      color: 'primary',
+      variant: 'subtle',
+      class: 'rounded-full'
+    }"
+  >
+    <template #title>
+      <Logo class="h-6 w-auto" />
+    </template>
+
     <template #left>
       <NuxtLink
         to="/"
@@ -13,10 +24,7 @@
       </NuxtLink>
     </template>
 
-    <UNavigationMenu
-      :items="items"
-      variant="link"
-    />
+    <UNavigationMenu :items="items" />
 
     <template #right>
       <UColorModeButton />
@@ -34,8 +42,6 @@
         orientation="vertical"
         class="-mx-2.5"
       />
-
-      <USeparator class="my-6" />
     </template>
   </UHeader>
 </template>
