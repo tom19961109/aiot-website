@@ -38,7 +38,7 @@ const industrieList = computed(() => [
   }
 ])
 
-const ogImageUrl = `https://www.aie-tec.com.tw/indexSnap-${locale.value}.png`
+const ogImageUrl = `https://www.aie-tec.com.tw/images/indexSnap-${locale.value}.png`
 
 useSeoMeta({
   titleTemplate: '',
