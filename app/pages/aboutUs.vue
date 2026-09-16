@@ -11,27 +11,27 @@
     >
       <path
         d="M0 0H230Q150 95 0 130Z"
-        fill="#c7f2e6"
+        fill="currentColor"
         opacity=".35"
       />
       <path
         d="M0 130Q200 80 340 0H470Q240 180 0 220Z"
-        fill="#dcf7ef"
+        fill="currentColor"
         opacity=".4"
       />
       <path
         d="M1400 0H1370Q1210 110 1050 142Q1230 143 1400 72Z"
-        fill="#d0f4e8"
+        fill="currentColor"
         opacity=".35"
       />
       <path
         d="M0 446Q150 483 360 520H0Z"
-        fill="#c0efdf"
+        fill="currentColor"
         opacity=".5"
       />
       <path
         d="M995 520Q1240 450 1400 359V520Z"
-        fill="#c8f1e5"
+        fill="currentColor"
         opacity=".45"
       />
     </svg>
@@ -263,11 +263,17 @@ useSeoMeta({
   overflow: hidden;
   min-height: 510px;
   padding: 58px 0 48px;
-  background: radial-gradient(ellipse at 50% 40%, #fff 30%, #f5fcfa 75%, #e8f9f3);
-  color: #142542;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    var(--ui-bg) 30%,
+    color-mix(in srgb, var(--ui-primary) 4%, var(--ui-bg)) 75%,
+    color-mix(in srgb, var(--ui-primary) 10%, var(--ui-bg))
+  );
+  color: var(--ui-text-highlighted);
   font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
 }
 .about-waves {
+  color: color-mix(in srgb, var(--ui-primary) 25%, var(--ui-bg));
   position: absolute;
   inset: 0;
   width: 100%;
@@ -303,7 +309,7 @@ useSeoMeta({
 }
 .about-heading p {
   margin: 9px 0 0;
-  color: #526d91;
+  color: var(--ui-text-muted);
   font-size: 18px;
   line-height: 1.8;
   letter-spacing: 0.03em;
@@ -339,7 +345,7 @@ useSeoMeta({
 }
 .feature p {
   margin: 16px 0 0;
-  color: #526d91;
+  color: var(--ui-text-muted);
   font-size: 16px;
   line-height: 1.65;
   letter-spacing: 0.025em;
