@@ -76,6 +76,30 @@ useHead(() => ({
           '@id': 'https://www.aie-tec.com.tw/#organization'
         }
       }).replace(/</g, '\\u003c')
+    },
+
+    {
+      key: 'spc-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: `https://www.aie-tec.com.tw${localePath('/')}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: t('solutions.spc_title'),
+            item: pageUrl.value
+          }
+        ]
+      }).replace(/</g, '\\u003c')
     }
   ]
 }))
