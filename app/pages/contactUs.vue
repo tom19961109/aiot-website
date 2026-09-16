@@ -239,4 +239,57 @@ useSeoMeta({
   description: description,
   ogDescription: description
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/contactUs')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'contact-us-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${t('contactUs.title')}`,
+        description: description.value,
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        about: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        },
+        breadcrumb: {
+          '@id': `${pageUrl.value}#breadcrumb`
+        }
+      }).replace(/</g, '\\u003c')
+    },
+    {
+      key: 'contact-us-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: `https://www.aie-tec.com.tw${localePath('/')}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: t('contactUs.title'),
+            item: pageUrl.value
+          }
+        ]
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>

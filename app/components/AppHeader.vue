@@ -55,7 +55,7 @@ const route = useRoute()
 
 const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 
-const open = ref(true)
+const open = ref(false)
 
 const { t } = useI18n()
 
