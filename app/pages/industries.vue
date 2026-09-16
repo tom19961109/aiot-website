@@ -48,4 +48,57 @@ useSeoMeta({
   description,
   ogDescription: description
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/industries')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'industries-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${t('industries.title')}`,
+        description: t('industries.description'),
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        publisher: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        },
+        breadcrumb: {
+          '@id': `${pageUrl.value}#breadcrumb`
+        }
+      }).replace(/</g, '\\u003c')
+    },
+    {
+      key: 'industries-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: `https://www.aie-tec.com.tw${localePath('/')}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: t('industries.title'),
+            item: pageUrl.value
+          }
+        ]
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>

@@ -226,7 +226,7 @@
 <script setup lang="ts">
 import type { PageFeatureProps } from '@nuxt/ui'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const features = ref<PageFeatureProps[]>([
   {
@@ -254,6 +254,59 @@ useSeoMeta({
   description: `${t('aboutUs.company_introduction_description')},${t('aboutUs.all_in')},${t('aboutUs.AI_decision')}`,
   ogDescription: `${t('aboutUs.company_introduction_description')},${t('aboutUs.all_in')},${t('aboutUs.AI_decision')}`
 })
+
+const localePath = useLocalePath()
+const pageUrl = computed(() => `https://www.aie-tec.com.tw${localePath('/aboutUs')}`)
+
+useHead(() => ({
+  script: [
+    {
+      key: 'about-us-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        '@id': `${pageUrl.value}#webpage`,
+        url: pageUrl.value,
+        name: `${t('seo.index.title')}-${t('aboutUs.title')}`,
+        description: t('aboutUs.description'),
+        inLanguage: locale.value,
+        isPartOf: {
+          '@id': 'https://www.aie-tec.com.tw/#website'
+        },
+        about: {
+          '@id': 'https://www.aie-tec.com.tw/#organization'
+        },
+        breadcrumb: {
+          '@id': `${pageUrl.value}#breadcrumb`
+        }
+      }).replace(/</g, '\\u003c')
+    },
+    {
+      key: 'about-us-breadcrumb-schema',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl.value}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: t('seo.index.title'),
+            item: `https://www.aie-tec.com.tw${localePath('/')}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: t('aboutUs.title'),
+            item: pageUrl.value
+          }
+        ]
+      }).replace(/</g, '\\u003c')
+    }
+  ]
+}))
 </script>
 
 <style scoped>
