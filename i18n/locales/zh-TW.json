@@ -24,7 +24,9 @@
     "aidc_title": "AiDC 智慧缺陷檢測系統",
     "aidc_description": "運用 AI 深度學習技術進行缺陷分類與視覺檢測，提升檢測效率與產品良率。",
     "aiot_title": "AIoT 智聯網",
-    "aiot_description": "可視化全面掌控、有效預防宕機、即時監控。"
+    "aiot_description": "可視化全面掌控、有效預防宕機、即時監控。",
+    "mes_title": "MES 製造執行系統",
+    "mes_description": "聚焦半導體/精密製造批次現場之LOT Control流程，可即時掌握批次進度，並有生產批歷史報表可追溯。"
   },
 
   "contactUs": {

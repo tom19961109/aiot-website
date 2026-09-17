@@ -32,6 +32,7 @@ import rpaImage from '@/assets/images/RPA.png'
 import spcImage from '@/assets/images/SPC.png'
 import adcImage from '@/assets/images/ADC.png'
 import aIotImage from '@/assets/images/AIOT.png'
+import mesImage from '@/assets/images/MES.png'
 
 const { t } = useI18n()
 
@@ -50,12 +51,13 @@ function getHeaderImage(image: BlogPostProps['image']): string | undefined {
       return adcImage
     case aIotImage:
       return aIotImage
+    case mesImage:
+      return mesImage
     default:
       return undefined
   }
 }
 
-// TODO:還沒有放上頁面，暫時隱藏
 const posts = computed<BlogPostProps[]>(() => [
   {
     title: t('solutions.eap_title'),
@@ -92,6 +94,12 @@ const posts = computed<BlogPostProps[]>(() => [
     description: t('solutions.aiot_description'),
     image: aIotImage,
     to: '/solutions/aiot'
+  },
+  {
+    title: t('solutions.mes_title'),
+    description: t('solutions.mes_description'),
+    image: mesImage,
+    to: '/solutions/mes'
   }
 ])
 </script>

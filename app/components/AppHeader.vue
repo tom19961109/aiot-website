@@ -67,33 +67,31 @@ const items = computed(() => [
     children: [
       {
         label: t('solutions.eap_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/eap'
       },
       {
         label: t('solutions.rcm_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/rcm'
       },
       {
         label: t('solutions.rpa_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/rpa'
       },
       {
         label: t('solutions.spc_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/spc'
       },
       {
         label: t('solutions.aidc_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/aidc'
       },
       {
         label: t('solutions.aiot_title'),
-        // icon: 'i-lucide-file-text',
         to: '/solutions/aiot'
+      },
+      {
+        label: t('solutions.mes_title'),
+        to: '/solutions/mes'
       }
     ]
   },
