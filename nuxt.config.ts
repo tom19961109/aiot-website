@@ -36,6 +36,12 @@ export default defineNuxtConfig({
     ]
   },
 
+  icon: {
+    clientBundle: {
+      scan: true
+    }
+  },
+
   sitemap: {
     autoLastmod: true
   }
