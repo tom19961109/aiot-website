@@ -64,5 +64,16 @@
     "all_in_description": "We provide remote control systems (RCM), manufacturing process automation (RPA), AIoT, Big Data analytics platforms, and self‑developed AI software to meet the needs of smart manufacturing. \n With a comprehensive workflow of real‑time inspection, analysis, prediction, and response, we help enterprises resolve issues that arise during manufacturing.",
     "AI_decision": "AI‑Driven Intelligent Decision‑Making",
     "AI_decision_description": "By integrating artificial intelligence technologies, we enable real‑time inspection, analysis, prediction, and anomaly handling, helping enterprises continuously optimize their processes and fully realize the value of Industry 4.0 and smart factories. "
+  },
+
+  "manualDownload": {
+    "title": "Manual Download",
+    "other": "Other",
+    "input_password_first": "Input password first please.",
+    "password_required":"password is required!",
+    "download_password": "Download password",
+    "password_error": "Password error!",
+    "submit": "Submit",
+    "MES_manual_tw": "MES Traditional Chinese User Manual"
   }
 }

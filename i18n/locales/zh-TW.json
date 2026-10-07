@@ -64,5 +64,16 @@
     "all_in_description": "提供遠端控制系統（RCM）、製造流程自動化（RPA）、AIoT、Big Data 分析平台，以及自主研發 AI 軟體，滿足智慧製造需求。 \n 以即時檢測、分析、預測和處理的全方位流程，協助企業解決製造出現的問題。",
     "AI_decision": "AI 驅動智慧決策",
     "AI_decision_description": "結合人工智慧技術，實現即時檢測、分析、預測與異常處理，協助企業持續優化製程，充分發揮工業 4.0與智慧工廠的價值。"
+  },
+
+  "manualDownload": {
+    "title": "手冊下載",
+    "other": "其它",
+    "input_password_first": "請先輸入密碼",
+    "password_required":"密碼必填！",
+    "download_password": "下載密碼",
+    "password_error": "密碼錯誤!",
+    "submit": "提交",
+    "MES_manual_tw": "MES 操作手冊繁體中文版"
   }
 }

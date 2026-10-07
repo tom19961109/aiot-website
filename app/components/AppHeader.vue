@@ -67,31 +67,38 @@ const items = computed(() => [
     children: [
       {
         label: t('solutions.eap_title'),
-        to: '/solutions/eap'
+        to: '/solutions/eap',
+        icon: 'ix:machine-c'
       },
       {
         label: t('solutions.rcm_title'),
-        to: '/solutions/rcm'
+        to: '/solutions/rcm',
+        icon: 'tabler:device-desktop'
       },
       {
         label: t('solutions.rpa_title'),
-        to: '/solutions/rpa'
+        to: '/solutions/rpa',
+        icon: 'tabler:robot'
       },
       {
         label: t('solutions.spc_title'),
-        to: '/solutions/spc'
+        to: '/solutions/spc',
+        icon: 'tabler:device-analytics'
       },
       {
         label: t('solutions.aidc_title'),
-        to: '/solutions/aidc'
+        to: '/solutions/aidc',
+        icon: 'tabler:photo-ai'
       },
       {
         label: t('solutions.aiot_title'),
-        to: '/solutions/aiot'
+        to: '/solutions/aiot',
+        icon: 'eos-icons:iot'
       },
       {
         label: t('solutions.mes_title'),
-        to: '/solutions/mes'
+        to: '/solutions/mes',
+        icon: 'icon-park-outline:system'
       }
     ]
   },
@@ -106,6 +113,10 @@ const items = computed(() => [
   {
     label: t('aboutUs.main_title'),
     to: '/aboutUs'
+  },
+  {
+    label: t('manualDownload.title'),
+    to: '/manualDownload'
   }
 ])
 
