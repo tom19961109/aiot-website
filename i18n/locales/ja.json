@@ -69,7 +69,7 @@
   "manualDownload": {
     "title": "マニュアルのダウンロード",
     "other": "その他",
-    "input_password_first": "先にパスワードを入力してください",
+    "input_password_first": "ダウンロードにはパスワードが必要です。パスワードが必要な場合は、弊社までお問い合わせください。",
     "password_required": "パスワードは必須です！",
     "download_password": "ダウンロードパスワード",
     "password_error": "パスワードが正しくありません！",

@@ -69,8 +69,8 @@
   "manualDownload": {
     "title": "手冊下載",
     "other": "其它",
-    "input_password_first": "請先輸入密碼",
-    "password_required":"密碼必填！",
+    "input_password_first": "下載時需要密碼,如需要密碼請與公司連絡",
+    "password_required": "密碼必填！",
     "download_password": "下載密碼",
     "password_error": "密碼錯誤!",
     "submit": "提交",

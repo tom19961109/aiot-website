@@ -69,8 +69,8 @@
   "manualDownload": {
     "title": "Manual Download",
     "other": "Other",
-    "input_password_first": "Input password first please.",
-    "password_required":"password is required!",
+    "input_password_first": "A password is required to download the file. If you need the password, please contact the company.",
+    "password_required": "password is required!",
     "download_password": "Download password",
     "password_error": "Password error!",
     "submit": "Submit",
