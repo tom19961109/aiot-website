@@ -68,12 +68,18 @@
 
   "manualDownload": {
     "title": "マニュアルのダウンロード",
+    "description": "主に各種コアソリューションの操作マニュアルやガイドをご提供しており、ダウンロードいただけます。",
     "other": "その他",
     "input_password_first": "ダウンロードにはパスワードが必要です。パスワードが必要な場合は、弊社までお問い合わせください。",
     "password_required": "パスワードは必須です！",
     "download_password": "ダウンロードパスワード",
     "password_error": "パスワードが正しくありません！",
     "submit": "送信",
-    "MES_manual_tw": "MES操作マニュアル（繁体字版）"
+    "search_manual_name": "マニュアル名を検索...",
+    "name": "マニュアル名",
+    "version_date": "版数日付",
+    "MES_manual_tw": "MES操作マニュアル（繁体字版）",
+    "manual_empty": "現在ダウンロード可能なマニュアルはありません",
+    "manual_empty_description": "関連資料は随時更新しておりますので、しばらくしてから再度ご確認ください。"
   }
 }

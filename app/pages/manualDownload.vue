@@ -1,28 +1,30 @@
 <template>
-  <UTabs
-    :items="items"
-    :ui="{
-      list: 'justify-around w-full',
-      trigger: 'grow flex-col gap-1 py-1',
-      label: 'text-[10px]/3'
-    }"
-    class="w-full"
-  >
-    <template #mes>
-      <ULink
-        class="cursor-pointer"
-        @click="openMesPwdDialog"
-        active-class="font-bold"
-        inactive-class="text-muted"
-        >{{ t('manualDownload.MES_manual_tw') }}(version：2026/10/07)
-      </ULink>
-    </template>
+  <ManualDownloadBanner />
 
-    <template #other> </template>
-  </UTabs>
+  <div class="flex flex-col flex-1 w-full">
+    <div class="flex px-4 py-3.5 border-b border-accented">
+      <UInput
+        :model-value="table?.tableApi?.getColumn('name')?.getFilterValue() as string"
+        class="max-w-sm"
+        :placeholder="t('manualDownload.search_manual_name')"
+        @update:model-value="table?.tableApi?.getColumn('name')?.setFilterValue($event)"
+      />
+    </div>
+
+    <UTable
+      ref="table"
+      v-model:column-filters="columnFilters"
+      :data="dataList"
+      :columns="columns"
+    >
+      <template #empty>
+        <ManualEmptyState />
+      </template>
+    </UTable>
+  </div>
 
   <UModal
-    v-model:open="isOpenMesPwd"
+    v-model:open="isOpenPwdDialog"
     :title="t('manualDownload.input_password_first')"
   >
     <template #body>
@@ -52,26 +54,67 @@
 <script setup lang="ts">
 import type { TabsItem, FormError } from '@nuxt/ui'
 import mesManualUrl from '~/assets/pdf/MES_Manual_20261007.pdf?url'
+import type { TableColumn } from '@nuxt/ui'
+import ManualDownloadBanner from '~/components/manualDownload/ManualDownloadBanner.vue'
+import ManualEmptyState from '~/components/manualDownload/ManualEmptyState.vue'
 
 const { t } = useI18n()
 
-const items: TabsItem[] = [
+const UBadge = resolveComponent('UBadge')
+const UIcon = resolveComponent('UIcon')
+
+type Manual = {
+  code: string
+  name: string
+  date: string
+}
+const dataList = ref<Manual[]>([
   {
-    label: t('solutions.mes_title'),
-    icon: 'icon-park-outline:system',
-    slot: 'mes' as const,
-    code: 'mes'
+    code: 'MES',
+    name: t('manualDownload.MES_manual_tw'),
+    date: '2026/10/07'
+  }
+])
+
+const columns: TableColumn<Manual>[] = [
+  {
+    accessorKey: 'name',
+    header: t('manualDownload.name'),
+
+    cell: ({ row }) => {
+      return h(
+        'div',
+        {
+          class: 'flex items-center gap-2 cursor-pointer',
+          onClick: () => openPasswordDialog(row.original.code)
+        },
+        [
+          h(UIcon, { name: 'tabler:book', class: 'size-5 shrink-0' }),
+          h('span', `${row.getValue<string>('name')}`)
+        ]
+      )
+    }
   },
   {
-    label: t('manualDownload.other'),
-    icon: 'i-lucide-activity',
-    slot: 'other' as const,
-    code: 'other'
+    accessorKey: 'date',
+    header: t('manualDownload.version_date')
   }
 ]
 
-/** 是否開啟MES下載之密碼提示對話框 */
-const isOpenMesPwd = ref(false)
+const columnFilters = ref([
+  {
+    id: 'name',
+    value: ''
+  }
+])
+
+const table = useTemplateRef('table')
+
+/** 是否開啟下載之密碼提示對話框 */
+const isOpenPwdDialog = ref(false)
+
+/** 目前點擊的手冊代碼 */
+const currentClickCode = ref()
 
 /** MES輸入密碼錯誤訊息 */
 const mesPasswordError = ref<string>()
@@ -86,29 +129,49 @@ type Schema = typeof mesForm
 /** 驗證必填欄位 */
 function validate(state: Partial<Schema>): FormError[] {
   const errors = []
-  if (!state.password) errors.push({ name: 'password', message:  t('manualDownload.password_required') })
+  if (!state.password)
+    errors.push({ name: 'password', message: t('manualDownload.password_required') })
   return errors
 }
 
-/** 開啟MES輸入密碼對話框 */
-function openMesPwdDialog() {
+/**
+ * 開啟MES輸入密碼對話框
+ * @param code
+ */
+function openPasswordDialog(code: string) {
   mesPasswordError.value = undefined
-  isOpenMesPwd.value = true
+  isOpenPwdDialog.value = true
+  currentClickCode.value = code
 }
 
 /** 下載MES操作手冊 */
 function downloadMesManual() {
   mesPasswordError.value = undefined
-  if (mesForm.password === 'AIoTCoLtdAIE_Mes202610') {
-    const link = document.createElement('a')
-    link.href = mesManualUrl
-    link.download = 'AIoTCoLtdMes202610.pdf'
-    document.body.appendChild(link)
-    link.click()
-    link.remove()
-    isOpenMesPwd.value = false
-  } else {
-    mesPasswordError.value = t('manualDownload.password_error')
+
+  switch (currentClickCode.value) {
+    case 'MES':
+      if (mesForm.password === 'Aie@82957797MES') {
+        const link = document.createElement('a')
+        link.href = mesManualUrl
+        link.download = 'AIoTCoLtdMes202610.pdf'
+        document.body.appendChild(link)
+        link.click()
+        link.remove()
+        isOpenPwdDialog.value = false
+      } else {
+        mesPasswordError.value = t('manualDownload.password_error')
+      }
+      break
+
+    default:
+      break
   }
 }
+
+useSeoMeta({
+  title: `${t('seo.index.title')}-${t('manualDownload.title')}`,
+  ogTitle: `${t('seo.index.title')}-${t('manualDownload.title')}`,
+  description: t('manualDownload.description'),
+  ogDescription: t('manualDownload.description')
+})
 </script>

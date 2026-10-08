@@ -68,12 +68,18 @@
 
   "manualDownload": {
     "title": "Manual Download",
+    "description": "Primarily used to download user manuals and implementation guides for various core solutions.",
     "other": "Other",
     "input_password_first": "A password is required to download the file. If you need the password, please contact the company.",
     "password_required": "password is required!",
     "download_password": "Download password",
     "password_error": "Password error!",
     "submit": "Submit",
-    "MES_manual_tw": "MES Traditional Chinese User Manual"
+    "search_manual_name": "Search manual name...",
+    "name": "Manual name",
+    "version_date": "Version date",
+    "MES_manual_tw": "MES Traditional Chinese User Manual",
+    "manual_empty": "No user manuals are currently available for download.",
+    "manual_empty_description": "We will continue to update the related documents. Please check back later."
   }
 }

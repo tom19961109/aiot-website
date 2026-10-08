@@ -68,12 +68,18 @@
 
   "manualDownload": {
     "title": "手冊下載",
+    "description": "提供產品操作手冊與相關文件，讓您快速取得所需的資源。",
     "other": "其它",
     "input_password_first": "下載時需要密碼,如需要密碼請與公司連絡",
     "password_required": "密碼必填！",
     "download_password": "下載密碼",
     "password_error": "密碼錯誤!",
     "submit": "提交",
-    "MES_manual_tw": "MES 操作手冊繁體中文版"
+    "search_manual_name": "搜尋手冊名稱...",
+    "name": "手冊名稱",
+    "version_date": "版本日期",
+    "MES_manual_tw": "MES 操作手冊繁體中文版",
+    "manual_empty": "目前沒有可下載的手冊",
+    "manual_empty_description": "我們會持續更新相關文件，請稍後再來查看。"
   }
 }
