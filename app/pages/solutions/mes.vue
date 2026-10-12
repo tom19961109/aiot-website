@@ -22,7 +22,7 @@ const contentStem = computed(() => `solutions/${locale.value}/8.mes`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-mes-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.mes_title')

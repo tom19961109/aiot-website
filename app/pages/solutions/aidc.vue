@@ -22,7 +22,7 @@ const contentStem = computed(() => `solutions/${locale.value}/5.aidc`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-aidc-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.aidc_title')

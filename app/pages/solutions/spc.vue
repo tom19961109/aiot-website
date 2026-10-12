@@ -24,7 +24,7 @@ const contentStem = computed(() => `solutions/${locale.value}/4.spc`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-spc-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.spc_title')

@@ -22,7 +22,7 @@ const contentStem = computed(() => `solutions/${locale.value}/6.aiot`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-aiot-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.aiot_title')

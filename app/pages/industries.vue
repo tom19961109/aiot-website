@@ -30,7 +30,7 @@ const contentStem = computed(() => `industries/${locale.value}/index`)
 
 const { data: postValue } = await useAsyncData(
   () => `industries-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('industries').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('industries.title')

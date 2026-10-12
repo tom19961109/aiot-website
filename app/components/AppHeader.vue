@@ -118,6 +118,10 @@ const items = computed(() => [
     label: t('manualDownload.title'),
     to: '/manualDownload',
     icon: 'tabler:download'
+  },
+  {
+    label: 'AIE Blog',
+    to: '/blog'
   }
 ])
 

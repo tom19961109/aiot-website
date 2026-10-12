@@ -7,6 +7,7 @@
 
     <UPage>
       <UPageBody>
+        
         <ContentRenderer
           v-if="postValue"
           :value="postValue"
@@ -24,7 +25,7 @@ const contentStem = computed(() => `solutions/${locale.value}/1.eap`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-eap-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.eap_title')

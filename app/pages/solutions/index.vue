@@ -29,7 +29,7 @@ const contentStem = computed(() => `solutions/${locale.value}/7.integration`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-integration-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => ('content').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.system_integration')

@@ -25,7 +25,7 @@ const contentStem = computed(() => `solutions/${locale.value}/2.rcm`)
 
 const { data: postValue } = await useAsyncData(
   () => `solutions-rcm-${locale.value}`,
-  () => queryCollection('content').where('stem', '=', contentStem.value).first()
+  () => queryCollection('solutions').where('stem', '=', contentStem.value).first()
 )
 
 const title = t('solutions.rcm_title')
