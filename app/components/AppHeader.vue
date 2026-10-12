@@ -120,7 +120,7 @@ const items = computed(() => [
     icon: 'tabler:download'
   },
   {
-    label: 'AIE Blog',
+    label: t('blog.name'),
     to: '/blog'
   }
 ])

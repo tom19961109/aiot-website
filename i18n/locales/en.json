@@ -84,7 +84,8 @@
   },
 
   "blog": {
-    "title": "AIE Blog-Share Knowledge, Exchange Experience, Explore Innovation",
+    "name": "Technical Resources",
+    "title": "Share Knowledge, Exchange Experience, Explore Innovation",
     "description": "Here, we share our experiences in technology exploration, practical applications, and product solutions. We document every step of the journey, from research and development to real-world implementation.We believe that the true value of technology lies not only in innovation, but also in communication and knowledge sharing. Through the exchange of ideas, expertise, and experiences, we hope to learn together, grow continuously, and create greater value."
   }
 }
