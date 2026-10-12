@@ -9,7 +9,11 @@ export const collections = {
     source: 'solutions/**/*.md',
     type: 'page'
   }),
-  blog: defineCollection({}),
+
+  blog: defineCollection({
+    source: 'blog/**/*.md',
+    type: 'page'
+  }),
   posts: defineCollection({
     source: 'blog/**/*.md',
     type: 'page',

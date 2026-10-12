@@ -46,16 +46,14 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-const { data: page } = await useAsyncData('blog', () => queryCollection('blog').first())
-
 const { data: posts } = await useAsyncData(
   computed(() => `posts-${locale.value.toLowerCase()}`),
   () =>
     queryCollection('posts').where('path', 'LIKE', `/blog/${locale.value.toLowerCase()}/%`).all()
 )
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = t('blog.title')
+const description = t('blog.description')
 
 useSeoMeta({
   title,
